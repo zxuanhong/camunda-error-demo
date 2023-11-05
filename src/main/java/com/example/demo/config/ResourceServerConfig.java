@@ -16,7 +16,6 @@ public class ResourceServerConfig {
 
     @Bean
     public SecurityFilterChain securityWebFilterChain(HttpSecurity http) throws Exception {
-        // 禁用csrf与cors
         http.csrf(AbstractHttpConfigurer::disable).cors(AbstractHttpConfigurer::disable);
         http.authorizeHttpRequests(authorize -> {
                     authorize.requestMatchers("/url/test").permitAll();
