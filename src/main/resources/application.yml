@@ -1,0 +1,29 @@
+# 流程配置
+camunda:
+  bpm:
+    generic-properties.properties:
+      # 开启java序列化
+      javaSerializationFormatEnabled: true
+    job-execution:
+      enabled: true
+    authorization:
+      enabled: false
+    metrics:
+      enabled: true
+      db-reporter-activate: true
+    database:
+      type: h2
+      jdbc-batch-processing: true
+    admin-user:
+      id: admin
+      password: admin
+      firstName: admin
+    filter:
+      create: All tasks
+    enabled: true
+    auto-deployment-enabled: false
+
+
+
+server:
+  port: 8080
